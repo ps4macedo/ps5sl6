@@ -1,5 +1,4 @@
 CACHE MANIFEST
-document/en/ps5/.gitattributes #1a1dbe176bc233b499d35a57db7513f2941c99ab9759f177830c9149be99005b
 document/en/ps5/appcache_handler.js #9a62f2f27046aa26155d23a042e0253df8c3663436265420b6a34ace45997d38
 document/en/ps5/custom_host_stuff.js #1e753eac444a6fc688ed1be10203286da56dddde3f150743816a3c3d1ade1b69
 document/en/ps5/exploit.js #9b8b8d499b8c5cff8255200373e03c8edf2e84531e9160b28a080c10c30dafe2
