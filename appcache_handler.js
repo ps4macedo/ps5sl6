@@ -62,17 +62,10 @@ function add_cache_event_toasts() {
         showToast('Site is obsolete.');
     }, false);
 
-    // appCache.addEventListener('progress', function (e) {
-    //     showToast('Caching site.');
-    // }, false);
-
     appCache.addEventListener('updateready', function (e) {
         if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
             showToast('The site was updated. Refresh to switch to updated version',8000);
         }
     }, false);
-
-
-
 
  }
