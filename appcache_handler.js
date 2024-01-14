@@ -1,6 +1,5 @@
 function get_appcache_state() {
     var appCache = window.applicationCache;
-
     switch (appCache.status) {
         case appCache.UNCACHED: // UNCACHED == 0
             return 'UNCACHED';
@@ -24,11 +23,9 @@ function get_appcache_state() {
             return 'UKNOWN CACHE STATUS';
             break;
     };
-
 }
 
 function add_cache_event_toasts() {
-    // showToast('Appcache state: ' + get_appcache_state());
     var appCache = window.applicationCache;
     
     if (!navigator.onLine) {
@@ -39,16 +36,11 @@ function add_cache_event_toasts() {
         showToast('Finished caching site.');
     }, false);
 
-    // appCache.addEventListener('checking', function (e) {
-    //     showToast('Checking for updates.');
-    // }, false);
-
     appCache.addEventListener('downloading', function (e) {
         showToast('Downloading new cache.');
     }, false);
 
     appCache.addEventListener('error', function (e) {
-        // only show error toast if we're online
         if (navigator.onLine) {
             showToast('Error while caching site.', 5000);
         }
