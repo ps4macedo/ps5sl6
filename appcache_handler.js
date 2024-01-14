@@ -32,10 +32,14 @@ function add_cache_event_toasts() {
         showToast('Você está off-line');
     }
 
-    appCache.addEventListener('cached', function (e) {
-        showToast('Finished caching site.');
-    }, false);
-
+	if (appCache) {
+		appCache.addEventListener('cached', function (e) {
+			showToast('Finished caching site.');
+		}, false);
+	} else {
+		console.error('Application Cache is not available.');
+	}
+	
     appCache.addEventListener('downloading', function (e) {
         showToast('Downloading new cache.');
     }, false);
